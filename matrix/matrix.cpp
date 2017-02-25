@@ -41,20 +41,22 @@ inline void border(float maxlength);
 
 int main() {
 
-	float k = 0;
 	matrix a;
-	char main_Menue, matrix_Menue;
+	char matrix_Menue;
 	bool running = true;	
 
+	//get first matrix
+	get_matrix(a);
+
+	//set title to matrix a
+	a.Title = "Matrix A";
+
 	do{
-		//get matrix from u ser
-		a.Title = "Matrix A";
-		get_matrix(a);
-
-
-
-		//display unser input
+		//display unser input and output
 		print_matrix(a, width * height);
+
+		//set title back to a after displaying output
+		a.Title = "Matrix A";
 
 		//display menue			
 		cout << "------------ Matrix math -------------------" << endl << endl;
@@ -105,7 +107,6 @@ void calc_sum(matrix &a) {
 	get_matrix(b);
 
 	//display input matrix
-	a.Title = "Matrix A";
 	print_matrix(a, width * height);
 
 	//display unser input
@@ -118,7 +119,7 @@ void calc_sum(matrix &a) {
 		}
 	}
 	//set title for output
-	a.Title = "SUm of A and B";
+	a.Title = "Sum of A and B";
 }
 
 void calc_diff(matrix &a) {
@@ -129,7 +130,6 @@ void calc_diff(matrix &a) {
 	get_matrix(b);
 
 	//display input matrix
-	a.Title = "Matrix A";
 	print_matrix(a, width * height);
 
 	//display unser input
@@ -153,7 +153,6 @@ void calc_mult(matrix &a) {
 	print_scalar(k);
 
 	//display input matrix
-	a.Title = "Matrix A";
 	print_matrix(a, width * height);
 
 	//preform scaler multiplication
@@ -166,7 +165,7 @@ void calc_mult(matrix &a) {
 }
   
 void calc_prod(matrix &a) {
-	matrix b, Sum;
+	matrix b, Temp;
 	float sum;
 
 	//get second matrix
@@ -174,7 +173,6 @@ void calc_prod(matrix &a) {
 	get_matrix(b);
 
 	//display input matrix
-	a.Title = "Matrix A";
 	print_matrix(a, width * height);
 
 	//display unser input
@@ -189,13 +187,13 @@ void calc_prod(matrix &a) {
 				sum += a.num[i][k] * b.num[k][j];
 			}
 			//this is a destructive process so save in seperate matrix
-			Sum.num[i][j] = sum;
+			Temp.num[i][j] = sum;
 		}
 	}
 	//apply sum to matrix A
 	for (int i = 0; i < height; i++) {
 		for (int j = 0; j < width; j++) {
-			a.num[i][j] = Sum.num[i][j];
+			a.num[i][j] = Temp.num[i][j];
 		}
 	}
 	a.Title = "Dot product of Matrix A";
@@ -204,8 +202,7 @@ void calc_prod(matrix &a) {
 void calc_inv(matrix &a) {
 	float determinate;
 
-	//print input matrix
-	a.Title = "Matrix A";
+	//display input matrix
 	print_matrix(a, width * height);
 
 	//calculate determinate
@@ -284,7 +281,7 @@ void print_matrix(matrix &a, int n) {
 	for (int i = 0; i < height; i++) {
 		for (int j = 0; j < width; j++) {
 			//for each number divide its value by 10 untill it reaches 0 givving length
-			int  length = 0, number = a.num[i][j];		
+			int  length = 0, Temp = a.num[i][j];		
 			string sNum = to_string(a.num[i][j]);
 			//remove trailing anomalous decimals from intigers from string
 			sNum.erase(sNum.find_last_not_of('0') + 1, string::npos);
@@ -298,7 +295,7 @@ void print_matrix(matrix &a, int n) {
 			sNum.erase(sNum.find_last_not_of('8') + 1, string::npos);
 			sNum.erase(sNum.find_last_not_of('9') + 1, string::npos);
 			length = sNum.length();
-			length += 2; // add an extra space
+			length++; // add an extra space
 			//save the highest value
 			if (length > maxlength) maxlength = length;
 		}

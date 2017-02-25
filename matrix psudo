@@ -1,70 +1,109 @@
 Douglas loughmiller
 Matrix psudocode
   declare matrix data structure
-  declare scalar k
   headderfiles
   function declarations
   start main
-    declare 2 matrix variables a and b
-    Display options for program
-    start loop (do loop)
-      switch statement
-        case for calc sum
-          call calc_sum function (parametters a)
-        case for calc difference
-          call calc_diff function (parametters a)
-        case scalar mult
-          call scalar_mult function (parametters a)
-        case for calc product
-          call calc_prod function (parametters a)
-        case for calc inverse
-          call calc_inv function passing (parametters a)
-        case to end
-          set variable to stop loop
-        default
-          print invalid input
-      end loop
+	declare matrix variables a
+	declare menue variable
+	declare running variable
+	call get matrix function (a)
+	sett title for a
+	start loop (do loop)
+	  call print function for matrix a	  
+	  Display options for program
+	  get user menue input
+	  switch statement
+		case for calc sum
+		  call calc_sum function (a)
+		case for calc difference
+		  call calc_diff function (a)
+		case scalar mult
+		  call scalar_mult function (a)
+		case for calc product
+		  call calc_prod function (a)
+		case for calc inverse
+		  call calc_inv function passing (a)
+		case to enter new matrix
+		  call get matrix function (a)
+		case to end
+		  set variable to stop loop
+		default
+		  print invalid input
+	  end loop
   end main
-  function calc_sum definition (matrix a matrix b)
+  function calc_sum definition (matrix a pass by reference)
   start def
-    call get matrix function for matrix a
-    call get matrix function for matrix b
-    preform matrix addition operation
-    call function print matirix for a
-    call function print matirix for b
-    call function print matirix for sum
+	declare matrix b
+	set title for matrix b
+	call get matrix function (b pass by reference)
+	call print function for matrix a
+	call print function for matrix b
+	preform matrix addition operation
+	set title for matrix a
   end def
-  function calc_diff definition (matrix a matrix b)
+  function calc_diff definition (matrix a pass by reference)
   start def
-    a = call get matrix function
-    b = call get matrix function
-    preform matrix subtraction operation
-    call function print matirix for a
-    call function print matirix for b
-    call function print matirix for difference
+	declare matrix b
+	set title for matrix b
+	call get matrix function (b)
+	call print function for matrix a
+	call print function for matrix b
+	preform matrix subtraction operation
+	set title for matrix a
   end def
-  function calc_mult definition (scalar k matrix a)
+  function calc_mult definition (matrix a  pass by reference)
   start def
-    a = call get matrix function
-    call get skalar function
-    preform scalar multiplication operation
-    call print function for matrix a
-    call print scalar function for scalar
-    call print matrix function for product
+	call get skalar function(k)
+	call print scalar function(k)
+	call print function for matrix a
+	preform scalar multiplication operation
+	set title for matrix a    
   end def_prod
-  function call calp_prod (matrix a matrix b)
+  function call calp_prod (matrix a  pass by reference)
   start def
-    a = call get matrix function
-    b = call get matrix function
-    preform matrix multiplication operation
-    call print matrix function for a
-    call print matrix function for b
-    call print matrix function for product
+	declare temporary matrix Temp
+	declare float sum
+	set title for b matrix
+	call get matrix function (b)
+	call print function for matrix a
+	preform matrix multiplication operation saving values to temp
+	save values to a
   end def
-  function define calc_inv (matrix a)
+  function define calc_inv (matrix a  pass by reference)
   start def
-    a = call get matrix function
-    preform invert matrix operation
-    call print matrix function for a
-    call print matrix function for inverse
+	call get matrix function (a)
+	calculate determinate value
+	swap A and D
+	invert B and C
+	scalar multiply a with the inverse of the determinate
+	set title for matrix a
+  end def
+  function ger_matrix (matrix a pass by reference)
+  start def
+	initialise counter to 0
+	display name of matrix being entered into
+	clear out the block of memory from either previous uses or random data
+	prompts user to enter in each value displaying graphically where it goes
+  end def
+  function get_scaler( float k pass by reference)
+  start def
+	promt user to enter scalar value
+	get scalar value
+  end def
+  inline function (float length)
+  start def
+	displays top and bottom portion of brackets
+  end def
+  function print_matrix(matrix a pass by reference, count)
+  start def
+	figures out the amount of space needed to display each number
+	saves each number to a temporary variable
+	converts variable to string
+	remove trailing numbers caused by conversion
+	get lenght of string
+	find the longest string and save its length
+	display title of matrix
+	display matrix each number of the matrix incrementing the counter untill the counter is equal to the input count
+	then if equal display marker
   end def
