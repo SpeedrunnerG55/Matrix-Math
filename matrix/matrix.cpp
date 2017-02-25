@@ -44,87 +44,53 @@ int main() {
 	float k = 0;
 	matrix a;
 	char main_Menue, matrix_Menue;
-	bool running = true;
-	bool matrix = false;
-	
+	bool running = true;	
 
 	do{
-		//MAIN MENUE
-		cout << "--------------- Math machine 1.0 -----------" << endl << endl;
+		//get matrix from u ser
+		a.Title = "Matrix A";
+		get_matrix(a);
 
-		cout << "- Enteries ---------------------------------" << endl
-			 << "   Type 1 to do matrix math" << endl
-			 //room for expantion
-			 << "   Type 9 to quit (quits program)" << endl << endl
-			//prompt
-			 << "> ";
+
+
+		//display unser input
+		print_matrix(a, width * height);
+
+		//display menue			
+		cout << "------------ Matrix math -------------------" << endl << endl;
+
+		cout << "what would you like to do to this matrix?" << endl << endl
+				<< " each sucsessive operation" << endl
+				<< " will act on the previous" << endl
+				<< " output, untill a new matrix is entered" << endl << endl
+
+				<< "- matrix-Operations ------------------------" << endl
+				<< "   Type 3 for matrix addition" << endl
+				<< "   Type 4 for matrix subtraction" << endl
+				<< "   Type 5 for scalar multiplacation" << endl
+				<< "   Type 6 for matrix multiplacation" << endl
+				<< "   Type 7 to invert a matrix" << endl
+			    << "   Type 8 to enter a new matrix" << endl
+				<< "   Type 9 to quit (quits program)" << endl << endl
+				//prompt
+				<< "> ";
 
 		//get menue selection
-		cin >> main_Menue;
+		cin >> matrix_Menue;
 
-		switch (main_Menue)	{
-		case '1':
-			//MATRIX MATH SECTION ##################################
+		//choose what function to call or quit
+		switch (matrix_Menue) {
 
-			matrix = true;
-
-			//get matrix from u ser
-			a.Title = "Matrix A";
-			get_matrix(a);
-
-			do{
-
-				//display unser input
-				print_matrix(a, width * height);
-
-				//display menue			
-				cout << "------------ Matrix math -------------------" << endl << endl;
-
-				cout << "what would you like to do to this matrix?" << endl << endl
-					 << " each sucsessive operation" << endl
-					 << " will act on the previous" << endl
-					 << " output, untill a new matrix is entered" << endl << endl
-
-					 << "- matrix-Operations ------------------------" << endl
-					 << "   Type 2 to enter a new matrix" << endl
-				 	 << "   Type 3 for matrix addition" << endl
-					 << "   Type 4 for matrix subtraction" << endl
-					 << "   Type 5 for scalar multiplacation" << endl
-					 << "   Type 6 for matrix multiplacation" << endl
-					 << "   Type 7 to invert a matrix" << endl
-					 << "   Type 8 to reenter or do other opeerations" << endl
-					 << "       (clears out of Matrix Math menue)" << endl
-					 << "   Type 9 to quit (quits program)" << endl << endl
-					 //prompt
-					 << "> ";
-
-				//get menue selection
-				cin >> matrix_Menue;
-
-				//choose what function to call or quit
-				switch (matrix_Menue) {
-
-				case '2': get_matrix(a); break;
-				case '3': calc_sum(a); break;
-				case '4': calc_diff(a); break;
-				case '5': calc_mult(a); break;
-				case '6': calc_prod(a); break;
-				case '7': calc_inv(a); break;
-				//if quit. quit also does clear
-				case '9': running = false;
-				//if clear
-				case '8': matrix = false; break;
-				default: cout << "invalid input" << endl;
-				}
-
-			} while (matrix);
-			// END OF MATRIX MATH SECTION ##########################
-			break;
-
-			case '9': running = false; break;
-			default: cout << "invalid input" << endl; break;			
+		case '3': calc_sum(a); break;
+		case '4': calc_diff(a); break;
+		case '5': calc_mult(a); break;
+		case '6': calc_prod(a); break;
+		case '7': calc_inv(a); break;
+		case '8': get_matrix(a); break;
+		case '9': running = false;
+		default: cout << "invalid input" << endl;
 		}
-		
+						
 	} while (running);
 
 	//end program

@@ -86,6 +86,7 @@ int main() {
 					 << " output, untill cleared" << endl << endl
 
 					 << "- matrix-Operations ------------------------" << endl
+					 << "   Type 2 to enter new matrix" << endl
 				 	 << "   Type 3 for matrix addition" << endl
 					 << "   Type 4 for matrix subtraction" << endl
 					 << "   Type 5 for scalar multiplacation" << endl
@@ -327,6 +328,15 @@ void print_matrix(matrix &a, int n) {
 			string sNum = to_string(a.num[i][j]);
 			//remove trailing 0's from string
 			sNum.erase(sNum.find_last_not_of('0') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('1') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('2') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('3') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('4') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('5') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('6') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('7') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('8') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('9') + 1, string::npos);
 			length = sNum.length();
 			length++; // add an extra space
 			//save the highest value

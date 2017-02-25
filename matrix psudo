@@ -10,13 +10,13 @@ Matrix psudocode
     start loop (do loop)
       switch statement
         case for calc sum
-          call calc_sum function (parametters a,b)
+          call calc_sum function (parametters a)
         case for calc difference
-          call calc_diff function (parametters a,b)
+          call calc_diff function (parametters a)
         case scalar mult
-          call scalar_mult function (parametters k,a)
+          call scalar_mult function (parametters a)
         case for calc product
-          call calc_prod function (parametters a,b)
+          call calc_prod function (parametters a)
         case for calc inverse
           call calc_inv function passing (parametters a)
         case to end
