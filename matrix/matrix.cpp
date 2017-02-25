@@ -83,9 +83,10 @@ int main() {
 				cout << "what would you like to do to this matrix?" << endl << endl
 					 << " each sucsessive operation" << endl
 					 << " will act on the previous" << endl
-					 << " output, untill cleared" << endl << endl
+					 << " output, untill a new matrix is entered" << endl << endl
 
 					 << "- matrix-Operations ------------------------" << endl
+					 << "   Type 2 to enter a new matrix" << endl
 				 	 << "   Type 3 for matrix addition" << endl
 					 << "   Type 4 for matrix subtraction" << endl
 					 << "   Type 5 for scalar multiplacation" << endl
@@ -235,12 +236,6 @@ void calc_prod(matrix &a) {
 }
 
 void calc_inv(matrix &a) {
-	//sanity check
-	if (height != width) {
-		cout << "Matrix is not square!" << endl
-			 << "Only square matrices" << endl
-			 << "have an inverse." << endl;
-	}
 	float determinate;
 
 	//print input matrix
@@ -325,10 +320,19 @@ void print_matrix(matrix &a, int n) {
 			//for each number divide its value by 10 untill it reaches 0 givving length
 			int  length = 0, number = a.num[i][j];		
 			string sNum = to_string(a.num[i][j]);
-			//remove trailing 0's from string
+			//remove trailing anomalous decimals from intigers from string
 			sNum.erase(sNum.find_last_not_of('0') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('1') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('2') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('3') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('4') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('5') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('6') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('7') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('8') + 1, string::npos);
+			sNum.erase(sNum.find_last_not_of('9') + 1, string::npos);
 			length = sNum.length();
-			length++; // add an extra space
+			length += 2; // add an extra space
 			//save the highest value
 			if (length > maxlength) maxlength = length;
 		}
