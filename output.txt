@@ -1,0 +1,351 @@
+
+enter number that goes here, marked by x.
+ -    -
+|  X   |
+|      |
+ -    -
+> 4
+enter number that goes here, marked by x.
+ -    -
+|  4  X|
+|      |
+ -    -
+> 5
+enter number that goes here, marked by x.
+ -    -
+|  4  5|
+|  X   |
+ -    -
+> 6
+enter number that goes here, marked by x.
+ -    -
+|  4  5|
+|  6  X|
+ -    -
+> 7
+Matrix A
+--------
+ -    -
+|  4  5|
+|  6  7|
+ -    -
+------------ Matrix math -------------------
+
+what would you like to do to this matrix?
+
+ each sucsessive operation
+ will act on the previous
+ output, untill a new matrix is entered
+
+- matrix-Operations ------------------------
+   Type 3 for matrix addition
+   Type 4 for matrix subtraction
+   Type 5 for scalar multiplacation
+   Type 6 for matrix multiplacation
+   Type 7 to invert a matrix
+   Type 8 to enter a new matrix
+   Type 9 to quit (quits program)
+
+> 3
+Matrix B
+enter number that goes here, marked by x.
+ -    -
+|  X   |
+|      |
+ -    -
+> 1
+enter number that goes here, marked by x.
+ -    -
+|  1  X|
+|      |
+ -    -
+> 2
+enter number that goes here, marked by x.
+ -    -
+|  1  2|
+|  X   |
+ -    -
+> 3
+enter number that goes here, marked by x.
+ -    -
+|  1  2|
+|  3  X|
+ -    -
+> 4
+Matrix A
+--------
+ -    -
+|  4  5|
+|  6  7|
+ -    -
+Matrix B
+--------
+ -    -
+|  1  2|
+|  3  4|
+ -    -
+Sum of A and B
+--------------
+ -      -
+|   5   7|
+|   9  11|
+ -      -
+------------ Matrix math -------------------
+
+what would you like to do to this matrix?
+
+ each sucsessive operation
+ will act on the previous
+ output, untill a new matrix is entered
+
+- matrix-Operations ------------------------
+   Type 3 for matrix addition
+   Type 4 for matrix subtraction
+   Type 5 for scalar multiplacation
+   Type 6 for matrix multiplacation
+   Type 7 to invert a matrix
+   Type 8 to enter a new matrix
+   Type 9 to quit (quits program)
+
+> 4
+Matrix B
+enter number that goes here, marked by x.
+ -    -
+|  X   |
+|      |
+ -    -
+> 5
+enter number that goes here, marked by x.
+ -    -
+|  5  X|
+|      |
+ -    -
+> 6
+enter number that goes here, marked by x.
+ -    -
+|  5  6|
+|  X   |
+ -    -
+> 3
+enter number that goes here, marked by x.
+ -    -
+|  5  6|
+|  3  X|
+ -    -
+> 1
+Matrix A
+--------
+ -      -
+|   5   7|
+|   9  11|
+ -      -
+Matrix B
+--------
+ -    -
+|  5  6|
+|  3  1|
+ -    -
+Difference of A
+---------------
+ -      -
+|   0   1|
+|   6  10|
+ -      -
+------------ Matrix math -------------------
+
+what would you like to do to this matrix?
+
+ each sucsessive operation
+ will act on the previous
+ output, untill a new matrix is entered
+
+- matrix-Operations ------------------------
+   Type 3 for matrix addition
+   Type 4 for matrix subtraction
+   Type 5 for scalar multiplacation
+   Type 6 for matrix multiplacation
+   Type 7 to invert a matrix
+   Type 8 to enter a new matrix
+   Type 9 to quit (quits program)
+
+> 5
+enter a scaler value
+
+> 9
+scalar value  = 9scalar value  = 9Matrix A
+--------
+ -      -
+|   0   1|
+|   6  10|
+ -      -
+Scalar product of Matrix A
+--------------------------
+ -      -
+|   0   9|
+|  54  90|
+ -      -
+------------ Matrix math -------------------
+
+what would you like to do to this matrix?
+
+ each sucsessive operation
+ will act on the previous
+ output, untill a new matrix is entered
+
+- matrix-Operations ------------------------
+   Type 3 for matrix addition
+   Type 4 for matrix subtraction
+   Type 5 for scalar multiplacation
+   Type 6 for matrix multiplacation
+   Type 7 to invert a matrix
+   Type 8 to enter a new matrix
+   Type 9 to quit (quits program)
+
+> 6
+Matrix B
+enter number that goes here, marked by x.
+ -    -
+|  X   |
+|      |
+ -    -
+> 2
+enter number that goes here, marked by x.
+ -    -
+|  2  X|
+|      |
+ -    -
+> 4
+enter number that goes here, marked by x.
+ -    -
+|  2  4|
+|  X   |
+ -    -
+> 1
+enter number that goes here, marked by x.
+ -    -
+|  2  4|
+|  1  X|
+ -    -
+> 7
+Matrix A
+--------
+ -      -
+|   0   9|
+|  54  90|
+ -      -
+Matrix B
+--------
+ -    -
+|  2  4|
+|  1  7|
+ -    -
+Dot product of Matrix A and B
+-----------------------------
+ -        -
+|    9   63|
+|  198  846|
+ -        -
+------------ Matrix math -------------------
+
+what would you like to do to this matrix?
+
+ each sucsessive operation
+ will act on the previous
+ output, untill a new matrix is entered
+
+- matrix-Operations ------------------------
+   Type 3 for matrix addition
+   Type 4 for matrix subtraction
+   Type 5 for scalar multiplacation
+   Type 6 for matrix multiplacation
+   Type 7 to invert a matrix
+   Type 8 to enter a new matrix
+   Type 9 to quit (quits program)
+
+> 8
+Matrix A
+enter number that goes here, marked by x.
+ -    -
+|  X   |
+|      |
+ -    -
+> 4
+enter number that goes here, marked by x.
+ -    -
+|  4  X|
+|      |
+ -    -
+> 7
+enter number that goes here, marked by x.
+ -    -
+|  4  7|
+|  X   |
+ -    -
+> 2
+enter number that goes here, marked by x.
+ -    -
+|  4  7|
+|  2  X|
+ -    -
+> 6
+Matrix A
+--------
+ -    -
+|  4  7|
+|  2  6|
+ -    -
+------------ Matrix math -------------------
+
+what would you like to do to this matrix?
+
+ each sucsessive operation
+ will act on the previous
+ output, untill a new matrix is entered
+
+- matrix-Operations ------------------------
+   Type 3 for matrix addition
+   Type 4 for matrix subtraction
+   Type 5 for scalar multiplacation
+   Type 6 for matrix multiplacation
+   Type 7 to invert a matrix
+   Type 8 to enter a new matrix
+   Type 9 to quit (quits program)
+
+> 7
+Matrix A
+--------
+ -    -
+|  4  7|
+|  2  6|
+ -    -
+Inverse of A
+------------
+ -      -
+| 0.6-0.7|
+|-0.2 0.4|
+ -      -
+------------ Matrix math -------------------
+
+what would you like to do to this matrix?
+
+ each sucsessive operation
+ will act on the previous
+ output, untill a new matrix is entered
+
+- matrix-Operations ------------------------
+   Type 3 for matrix addition
+   Type 4 for matrix subtraction
+   Type 5 for scalar multiplacation
+   Type 6 for matrix multiplacation
+   Type 7 to invert a matrix
+   Type 8 to enter a new matrix
+   Type 9 to quit (quits program)
+
+> BAD_INPUT
+invalid input
+Matrix A
+--------
+ -      -
+| 0.6-0.7|
+|-0.2 0.4|
+ -      -

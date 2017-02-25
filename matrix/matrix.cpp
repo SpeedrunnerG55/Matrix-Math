@@ -196,7 +196,7 @@ void calc_prod(matrix &a) {
 			a.num[i][j] = Temp.num[i][j];
 		}
 	}
-	a.Title = "Dot product of Matrix A";
+	a.Title = "Dot product of Matrix A and B";
 }
 
 void calc_inv(matrix &a) {
@@ -243,15 +243,14 @@ void get_matrix(matrix &a) {
 			print_matrix(a, count);
 			count++;
 			//prompt
-			cout << endl << "> ";
+			cout << "> ";
 			cin >> a.num[i][j];
 		}
 	}
 
 }
 
-void get_scalar(float &a) {
-	float k;
+void get_scalar(float &k) {
 	cout << "enter a scaler value " << endl << endl
 		 //prompt
 		 << "> ";
@@ -304,8 +303,11 @@ void print_matrix(matrix &a, int n) {
 	//dont display title every time user unputs number
 	if (n == width * height) {
 		//display title
-		cout << endl << a.Title << endl;
-		cout << "------------------" << endl;
+		cout << a.Title << endl;
+		for (int i = 0; i < a.Title.length(); i++) {
+			cout << "-";
+		}
+		cout << endl;
 	}
 
 	//top border
